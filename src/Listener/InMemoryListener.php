@@ -22,8 +22,8 @@ class InMemoryListener extends IdleListener
 
     public function startDocument()
     {
-        $this->stack = [];
-        $this->keys = [];
+        $this->stack = array();
+        $this->keys = array();
     }
 
     public function startObject()
@@ -60,7 +60,7 @@ class InMemoryListener extends IdleListener
     {
         // We keep a stack of complex values (i.e. arrays and objects) as we build them,
         // tagged with the type that they are so we know how to add new values.
-        $current_item = ['type' => $type, 'value' => []];
+        $current_item = array('type' => $type, 'value' => array());
         $this->stack[] = $current_item;
     }
 

@@ -1,10 +1,9 @@
 CHANGELOG
 =========
 
-## 6.0.0 (2016-03-20)
+## 6.0.0 (2016-03-19)
 * Big refactoring
 * PSR-2 support
-* Bump minimal PHP version requirement to 5.4
 * Increase tests coverage
 
 ## 5.1.0 (2016-03-13)

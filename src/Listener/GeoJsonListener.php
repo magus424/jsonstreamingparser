@@ -39,11 +39,11 @@ class GeoJsonListener implements Listener
 
     public function startDocument()
     {
-        $this->stack = [];
+        $this->stack = array();
         $this->level = 0;
         // Key is an array so that we can can remember keys per level to avoid
         // it being reset when processing child keys.
-        $this->key = [];
+        $this->key = array();
     }
 
     public function endDocument()
@@ -54,10 +54,10 @@ class GeoJsonListener implements Listener
     public function startObject()
     {
         $this->level++;
-        $this->stack[] = [];
+        $this->stack[] = array();
         // Reset the stack when entering the second level
         if ($this->level == 2) {
-            $this->stack = [];
+            $this->stack = array();
             $this->key[$this->level] = null;
         }
     }

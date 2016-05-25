@@ -16,7 +16,7 @@ abstract class SubsetConsumerListener implements Listener
 
     public function startDocument()
     {
-        $this->keyValueStack = [];
+        $this->keyValueStack = array();
     }
 
     public function endDocument()
@@ -25,7 +25,7 @@ abstract class SubsetConsumerListener implements Listener
 
     public function startObject()
     {
-        $this->keyValueStack[] = is_null($this->key) ? [[]] : [$this->key => []];
+        $this->keyValueStack[] = is_null($this->key) ? array(array()) : array($this->key => array());
         $this->key = null;
     }
 

@@ -6,9 +6,9 @@ use JsonStreamingParser\Listener;
 class TestListener implements Listener
 {
 
-    public $order = [];
+    public $order = array();
 
-    public $positions = [];
+    public $positions = array();
 
     protected $currentLine;
     protected $currentChar;
@@ -57,7 +57,7 @@ class TestListener implements Listener
     public function value($value)
     {
         $this->order[] = __FUNCTION__ . ' = ' . self::stringify($value);
-        $this->positions[] = ['value' => $value, 'line' => $this->currentLine, 'char' => $this->currentChar];
+        $this->positions[] = array('value' => $value, 'line' => $this->currentLine, 'char' => $this->currentChar);
     }
 
     public function whitespace($whitespace)
